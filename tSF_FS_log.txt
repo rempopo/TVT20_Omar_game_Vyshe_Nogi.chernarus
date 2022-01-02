@@ -1,0 +1,13 @@
+"####### tSF File Sweeper Engaged #######" 
+Mission directory:     N:\TacShift\TVT20_Omar_game_Vyshe_Nogi.chernarus\ 
+Mission fodler name:   TVT20_Omar_game_Vyshe_Nogi 
+Removing tSF Helpers 
+Removing DynAI Helpers 
+Removing unused tSF Modules 
+    Folder is not used: Removing AirborneSupport 
+    Folder is not used: Removing ArtillerySupport 
+    Folder is not used: Removing Conversations 
+    Folder is not used: Removing EditorUnitBehavior 
+    Folder is not used: Removing Interactives 
+    Folder is not used: Removing POM 
+Done! 
