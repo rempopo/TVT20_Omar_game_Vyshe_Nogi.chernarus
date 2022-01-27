@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1029;
+		nextID=1050;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=15;
 	};
 	class LayerIndexProvider
 	{
-		nextID=40;
+		nextID=55;
 	};
 	class Camera
 	{
-		pos[]={5664.7471,326.59851,7529.5098};
+		pos[]={5699.0293,333.63489,7496.1943};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -51,13 +51,16 @@ addons[]=
 	"plp_containers",
 	"A3_Structures_F_Civ_Lamps",
 	"A3_Structures_F_Enoch_Infrastructure_Lamps",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Modules_F_Curator_Misc",
+	"A3_Ui_F",
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -164,6 +167,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item16
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item17
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -176,25 +193,145 @@ dlcs[]=
 randomSeed=9653145;
 class ScenarioData
 {
-	author="Arsdor";
+	author="Arsdor for Tactical Shift";
+	overviewText="Refugees fighting for visa";
+	overViewPicture="overview.jpg";
+	overViewPictureLocked="overview.jpg";
+	onLoadMission="Refugees fighting for visa";
+	loadScreen="overview.jpg";
+	saving=0;
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=20;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="ace_spectator";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="EndMission";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=2;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="TVT20_Omar_Game_Vyshe_Nogi_ot_Zemli";
+		overviewText="Refugees fighting for visa";
 		timeOfChanges=1800.0002;
-		startWeather=0.25;
+		startWeather=0;
+		startFog=0.033488803;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.25;
+		forecastWeather=1;
+		forecastFog=1;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=2008;
-		month=10;
-		day=11;
+		year=2021;
+		month=11;
+		day=9;
 		hour=9;
 		minute=20;
 		startFogDecay=0.014;
@@ -202,7 +339,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=25;
 		class Item0
 		{
 			dataType="Layer";
@@ -24798,6 +24935,268 @@ class Mission
 			name="Boxes";
 			id=1028;
 			atlOffset=51.599998;
+		};
+		class Item10
+		{
+			dataType="Layer";
+			name="3DEN Tools Layer";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={5694.1079,311.03616,7518.793};
+					};
+					name="tSF_Scenario_Logic";
+					init="tSF_SummaryText = 'Refugees fighting for visa'";
+					id=1029;
+					type="Logic";
+				};
+				class Item1
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={5675.7905,311.45599,7544.1704};
+						angles[]={6.2565231,0.70861989,0.018667053};
+					};
+					name="tSF_CoverMap";
+					areaSize[]={20,0,40};
+					areaIsRectangle=1;
+					flags=1;
+					id=1031;
+					type="ModuleCoverMap_F";
+				};
+				class Item2
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={5703.4507,310.98813,7514.1514};
+					};
+					name="HC";
+					isPlayable=1;
+					id=1032;
+					type="HeadlessClient_F";
+				};
+			};
+			id=1030;
+			atlOffset=-0.02947998;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={5707.8237,313.34106,7584.3413};
+			name="respawn_west";
+			type="mil_start";
+			colorName="ColorWEST";
+			id=1033;
+		};
+		class Item12
+		{
+			dataType="Layer";
+			name="tSF Layer";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={5693.501,311.18423,7524.5083};
+					};
+					name="tSF_Zeus";
+					init="this setVariable ['addons',3,true];this setVariable ['owner','#adminLogged',true];";
+					id=1034;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			id=1035;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={5642.8252,309.81522,7504.7476};
+			name="respawn_east";
+			type="mil_start";
+			colorName="ColorEAST";
+			id=1036;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={5651.9346,310.16284,7512.2964};
+			name="marker_2";
+			type="mil_box";
+			id=1037;
+		};
+		class Item15
+		{
+			dataType="Marker";
+			position[]={5647.7813,310.14499,7515.9312};
+			name="marker_3";
+			type="mil_box";
+			id=1038;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={5698.8071,312.90936,7576.2964};
+			name="marker_6";
+			type="mil_box";
+			id=1041;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={5702.3896,312.87863,7573.5688};
+			name="marker_7";
+			type="mil_box";
+			id=1042;
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={5681.7588,312.53922,7576.1675};
+			name="marker_8";
+			type="mil_circle";
+			id=1043;
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={5649.3643,310.57977,7533.8555};
+			name="marker_9";
+			type="mil_circle";
+			id=1044;
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={5652.7407,310.78668,7538.9951};
+			name="marker_10";
+			type="mil_circle";
+			id=1045;
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={5669.7593,310.53094,7513.0342};
+			name="marker_11";
+			type="mil_circle";
+			id=1046;
+		};
+		class Item22
+		{
+			dataType="Marker";
+			position[]={5700.1133,312.07297,7550.7559};
+			name="marker_12";
+			type="mil_circle";
+			id=1047;
+		};
+		class Item23
+		{
+			dataType="Marker";
+			position[]={5703.1772,312.28152,7555.9023};
+			name="marker_13";
+			type="mil_circle";
+			id=1048;
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={5676.9551,311.5032,7545.126};
+			name="marker_14";
+			markerType="RECTANGLE";
+			type="";
+			a=19;
+			b=2;
+			angle=38.991302;
+			id=1049;
 		};
 	};
 	class Connections
