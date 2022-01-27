@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1028;
+		nextID=1029;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=29;
+		nextID=40;
 	};
 	class Camera
 	{
-		pos[]={5651.9556,347.05704,7492.0142};
-		dir[]={0.30005127,-0.64218622,0.70550007};
-		up[]={0.25149629,0.76621306,0.59133244};
-		aside[]={0.92031413,-1.801076e-006,-0.39141777};
+		pos[]={5664.7471,326.59851,7529.5098};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -202,7 +202,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			dataType="Layer";
@@ -17851,7 +17851,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Side 1 movable";
-			state=2;
 			class Entities
 			{
 				items=106;
@@ -18089,7 +18088,7 @@ class Mission
 					};
 					id=463;
 					type="Land_Plank_01_4m_F";
-					atlOffset=1.4299622;
+					atlOffset=0.24752808;
 				};
 				class Item14
 				{
@@ -18394,7 +18393,7 @@ class Mission
 					};
 					id=432;
 					type="Land_TimberLog_02_F";
-					atlOffset=2.3746033;
+					atlOffset=0.81661987;
 				};
 				class Item32
 				{
@@ -18761,7 +18760,7 @@ class Mission
 					};
 					id=689;
 					type="Land_Pallets_F";
-					atlOffset=3.7815857;
+					atlOffset=1.8815002;
 				};
 				class Item54
 				{
@@ -18981,7 +18980,7 @@ class Mission
 					};
 					id=702;
 					type="Land_Plank_01_4m_F";
-					atlOffset=2.1483765;
+					atlOffset=0.98635864;
 				};
 				class Item67
 				{
@@ -19201,7 +19200,7 @@ class Mission
 					};
 					id=715;
 					type="Land_TimberPile_01_F";
-					atlOffset=3.1260376;
+					atlOffset=1.7853088;
 				};
 				class Item80
 				{
@@ -19286,7 +19285,7 @@ class Mission
 					};
 					id=720;
 					type="Land_TimberLog_02_F";
-					atlOffset=2.335022;
+					atlOffset=0.89749146;
 				};
 				class Item85
 				{
@@ -22948,7 +22947,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Lamps and flags";
-			state=1;
 			class Entities
 			{
 				items=37;
@@ -22958,7 +22956,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5652.2354,311.77002,7504.2295};
-						angles[]={0,2.3171611,-0};
+						angles[]={0,2.3171611,0};
 					};
 					side="Empty";
 					flags=5;
@@ -22974,7 +22972,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5643.8608,311.47327,7497.2993};
-						angles[]={0,3.9261496,-0};
+						angles[]={0,3.9261496,0};
 					};
 					side="Empty";
 					flags=5;
@@ -22990,7 +22988,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5641.0854,311.7309,7514.5942};
-						angles[]={0,5.4297223,-0};
+						angles[]={0,5.4297223,0};
 					};
 					side="Empty";
 					flags=5;
@@ -23006,7 +23004,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5634.9995,311.41049,7504.9629};
-						angles[]={0,3.9261496,-0};
+						angles[]={0,3.9261496,0};
 					};
 					side="Empty";
 					flags=5;
@@ -23022,7 +23020,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5644.7471,311.47495,7496.3706};
-						angles[]={0,3.9261496,-0};
+						angles[]={0,3.9261496,0};
 					};
 					side="Empty";
 					flags=5;
@@ -23038,7 +23036,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5648.2715,311.78149,7509.0303};
-						angles[]={0,0.96647757,-0};
+						angles[]={0,0.96647757,0};
 					};
 					side="Empty";
 					flags=5;
@@ -23054,7 +23052,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5649.2773,311.94919,7516.2256};
-						angles[]={0,5.4297223,-0};
+						angles[]={0,5.4297223,0};
 					};
 					side="Empty";
 					flags=5;
@@ -23070,7 +23068,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5651.561,311.94873,7513.6987};
-						angles[]={0,2.3383236,-0};
+						angles[]={0,2.3383236,0};
 					};
 					side="Empty";
 					flags=5;
@@ -24793,6 +24791,13 @@ class Mission
 			};
 			id=979;
 			atlOffset=3.0517578e-005;
+		};
+		class Item9
+		{
+			dataType="Layer";
+			name="Boxes";
+			id=1028;
+			atlOffset=51.599998;
 		};
 	};
 	class Connections
